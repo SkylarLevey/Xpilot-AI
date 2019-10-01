@@ -1,0 +1,33 @@
+Instructions for getting setup in Xpilot-AI
+
+Xpilot-AI GitLab
+https://gitlab.com/xpilot-ai/xpilot-ai
+
+Download the following:
+binaries/xpilot
+binaries/xpilots
+binaries/libpyAI.so
+archives/maps.tar.gz
+exampleBots/python/Spinner.py
+
+Open a terminal and cd to the location of the files you downloaded (for example):
+cd Downloads/
+
+Now we have to make xpilot (the client) and xpilots (the server) executable by running the following commands:
+chmod +x xpilot
+chmod +x xpilots
+
+Then extract the maps for the server to the same location as xpilots either by navigating to the file, double-clicking, and exporting, or by running the following command:
+tar -xzf maps.tar.gz
+
+You can run a server with the following command:
+./xpilots -map maps/simple.xp -noQuit -switchBase 1
+(Press Ctrl+C in the same terminal window to stop the server)
+
+You can run the XPilot client simply by navigating to xpilot and double-clicking on it or in a new terminal running: ./xpilot
+
+Once the xpilot window opens, click on Local, then localhost to join your server!
+The keys a and s turn left and right, while shift thrusts and enter fires.
+
+To run the Spinner bot, open a terminal, cd to the directory with Spinner and libpyAI.so, then run:
+python3 Spinner.py
